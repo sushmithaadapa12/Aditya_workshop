@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics Workshop</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <link rel="stylesheet" href="https://example.com/styles.css"> -->
+</head>
+<body>
+
+    <!-- HTML Basics -->
+    <header>
+        <h1>Welcome to the HTML Basics Workshop</h1>
+        <p>In this workshop, we'll cover the fundamental elements of HTML.</p>
+    </header>
+
+    <!-- Essential Tags -->
+    <section id="essential-tags">
+        <h2>Essential HTML Tags</h2>
+
+        <!-- Paragraph Tag -->
+        <p>This is a paragraph tag used to add text to the page.</p>
+
+        <!-- Anchor Tag (Link) -->
+        <p>Here is a link to <a href="https://www.example.com" target="_blank">Example Website</a>.</p>
+
+        <!-- Image Tag -->
+        <p>Below is an example image:</p>
+        <img src="https://via.placeholder.com/150" alt="Example Image" width="150" height="150">
+
+        <!-- Unordered List -->
+        <p>Unordered List of Items:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <!-- Ordered List -->
+        <p>Ordered List of Steps:</p>
+        <ol>
+            <li>Learn HTML</li>
+            <li>Practice CSS</li>
+            <li>Master JavaScript</li>
+        </ol>
+
+        <!-- Table -->
+        <p>Example Table:</p>
+        <table border="1">
+            <tr>
+                <th>Course</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>1 Day</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>1 Day</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>2 Days</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Creating Layouts with Divs and Sections -->
+    <section id="layout">
+        <h2>Creating Layouts with Divs and Sections</h2>
+
+        <!-- Div Example -->
+        <div style="border: 1px solid #333; padding: 10px; margin: 10px 0;">
+            <h3>Div Section</h3>
+            <p>This is a layout container created using a <code>&lt;div&gt;</code> element.</p>
+        </div>
+
+        <!-- Header, Footer, Section, Nav Tags -->
+        <header style="background-color: lightgrey; padding: 10px;">
+            <h2>Header Section</h2>
+            <p>This is the header of the webpage.</p>
+        </header>
+
+        <nav>
+            <p>Navigation links:</p>
+            <a href="#essential-tags">Essential Tags</a> |
+            <a href="#layout">Layout</a> |
+            <a href="#forms">Forms</a> |
+            <a href="#attributes">Attributes</a>
+        </nav>
+
+        <footer style="background-color: lightgrey; padding: 10px;">
+            <p>&copy; 2024 Web Development Workshop</p>
+        </footer>
+    </section>
+
+    <!-- Forms in HTML -->
+    <section id="forms">
+        <h2>Forms in HTML</h2>
+
+        <!-- Form with Basic Input Types -->
+        <form action="#" method="post">
+            <!-- Label and Text Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <br><br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <br><br>
+
+            <!-- Number Input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100">
+
+            <br><br>
+
+            <!-- Textarea -->
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+
+            <br><br>
+
+            <!-- Select Dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- HTML Attributes and Links -->
+    <section id="attributes">
+        <h2>HTML Attributes and Links</h2>
+
+        <!-- Using id and class attributes -->
+        <div id="uniqueId" class="example-class" style="border: 1px solid blue; padding: 10px;">
+            <p>This <code>&lt;div&gt;</code> has an <code>id</code> of "uniqueId" and a <code>class</code> of "example-class".</p>
+        </div>
+
+        <!-- Linking pages -->
+        <p>To link to another page, use the <code>&lt;a&gt;</code> tag:</p>
+        <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+
+        <!-- Image with src and alt attributes -->
+        <p>To display an image, use the <code>&lt;img&gt;</code> tag with the <code>src</code> and <code>alt</code> attributes:</p>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image" width="150" height="150">
+    </section>
+
+</body>
+</html>

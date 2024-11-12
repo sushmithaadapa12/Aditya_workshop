@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic vs Non-Semantic HTML</title>
+    <style>
+        /* Styling to help visually compare */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            width: 45%;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #333;
+        }
+        .example {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px dashed #aaa;
+        }
+        .example pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Semantic vs Non-Semantic HTML Elements</h1>
+
+    <div class="container">
+        <!-- Semantic HTML -->
+        <div class="box">
+            <h2>Semantic HTML</h2>
+            <p>Semantic elements describe their meaning in a way that both humans and machines can understand. They provide better structure and accessibility for the content.</p>
+
+            <div class="example">
+                <h3>Example:</h3>
+                <pre>
+&lt;header&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;About Us&lt;/h2&gt;
+        &lt;p&gt;This section describes our company.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Latest News&lt;/h2&gt;
+        &lt;p&gt;Here are the latest updates from our company...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 My Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+                </pre>
+            </div>
+        </div>
+
+        <!-- Non-Semantic HTML -->
+        <div class="box">
+            <h2>Non-Semantic HTML</h2>
+            <p>Non-semantic elements do not define the content they hold. These tags are used for layout purposes without providing meaning to the content.</p>
+
+            <div class="example">
+                <h3>Example:</h3>
+                <pre>
+&lt;div&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;div&gt;
+        &lt;a href="#home"&gt;Home&lt;/a&gt; | &lt;a href="#about"&gt;About&lt;/a&gt; | &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;This section describes our company.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;h2&gt;Latest News&lt;/h2&gt;
+    &lt;p&gt;Here are the latest updates from our company...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2024 My Website. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <h2>Comparison Between Semantic and Non-Semantic Elements</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="width:100%; margin-top: 20px;">
+        <thead>
+            <tr>
+                <th style="width: 50%;">Semantic Elements</th>
+                <th style="width: 50%;">Non-Semantic Elements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Meaning:</strong> Clearly defines the content inside it, describing its purpose.</td>
+                <td><strong>Meaning:</strong> Does not define or describe its content. Used for structure and layout.</td>
+            </tr>
+            <tr>
+                <td><strong>Examples:</strong> <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code></td>
+                <td><strong>Examples:</strong> <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code></td>
+            </tr>
+            <tr>
+                <td><strong>Accessibility:</strong> Improves accessibility for screen readers and search engines (SEO-friendly).</td>
+                <td><strong>Accessibility:</strong> Does not provide any meaning for screen readers or search engines.</td>
+            </tr>
+            <tr>
+                <td><strong>Readability:</strong> Improves code readability and helps developers understand the content structure.</td>
+                <td><strong>Readability:</strong> May make the code harder to understand since it lacks descriptive meaning.</td>
+            </tr>
+            <tr>
+                <td><strong>Layout Purpose:</strong> Primarily used to structure and describe content.</td>
+                <td><strong>Layout Purpose:</strong> Primarily used for styling and layout.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

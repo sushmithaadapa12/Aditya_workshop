@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Workshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .box {
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        #hoverBox {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>JavaScript Basics Workshop</h1>
+        <p>In this workshop, we'll cover essential JavaScript concepts to add interactivity to web pages.</p>
+
+        <!-- JavaScript Basics -->
+        <h2>JavaScript Basics</h2>
+        <div class="box">
+            <p>Click the button to see a message:</p>
+            <button onclick="showMessage()">Show Message</button>
+            <p id="message"></p>
+        </div>
+
+        <h3>ES6+ Features</h3>
+        <div class="box">
+            <p>Click the button to see a demo of ES6+ features:</p>
+            <button onclick="showES6Features()">Show ES6+ Features</button>
+            <p id="es6demo"></p>
+        </div>
+
+        <h2>Functions and Events</h2>
+        <div class="box">
+            <p>Hover over the box below to change its color:</p>
+            <div id="hoverBox" onmouseover="changeColor()" onmouseout="resetColor()"></div>
+        </div>
+
+        <h2>DOM Manipulation</h2>
+        <div class="box">
+            <p>Enter text below and click the button to change the paragraph text:</p>
+            <input type="text" id="inputText" placeholder="Type something...">
+            <button onclick="updateParagraph()">Update Text</button>
+            <p id="dynamicText">This is some text that will change.</p>
+        </div>
+
+        <h2>Conditionals and Loops</h2>
+        <div class="box">
+            <p>Check if a number is odd or even:</p>
+            <input type="number" id="numberInput" placeholder="Enter a number">
+            <button onclick="checkOddOrEven()">Check Number</button>
+            <p id="numberResult"></p>
+        </div>
+
+        <div class="box">
+            <p>Loop through an array and display the items:</p>
+            <button onclick="displayArray()">Show Items</button>
+            <ul id="arrayList"></ul>
+        </div>
+
+        <!-- Async Programming -->
+        <h2>Async Programming</h2>
+        <div class="box">
+            <p>Click the button to simulate a delay using a promise:</p>
+            <button onclick="simulateDelay()">Simulate Delay</button>
+            <p id="delayResult"></p>
+        </div>
+
+        <div class="box">
+            <p>Click the button to fetch data asynchronously:</p>
+            <button onclick="fetchData()">Fetch Data</button>
+            <p id="fetchResult"></p>
+        </div>
+
+        <script>
+            // JavaScript Basics (Syntax, Variables, Data Types, and Operators)
+
+            // Variables and Data Types
+            let name = "Alice";  // String
+            const age = 25;      // Number
+            var isStudent = true; // Boolean
+
+            // Basic Operators
+            let x = 10;
+            let y = 5;
+            let sum = x + y; // Addition
+
+            // Function to Show Message
+            function showMessage() {
+                document.getElementById("message").textContent = `Hello, ${name}! You are ${age} years old.`;
+            }
+
+            // ES6+ Features (let, const, arrow functions, template literals, destructuring, spread operator)
+            function showES6Features() {
+                // Destructuring
+                const person = { name: "Bob", age: 30 };
+                const { name: personName, age: personAge } = person;
+
+                // Arrow function
+                const greet = () => `Hello, ${personName}, you are ${personAge} years old!`;
+
+                // Template literals
+                let message = `Destructured name is ${personName}, and age is ${personAge}.`;
+
+                // Spread operator
+                let numbers = [1, 2, 3];
+                let moreNumbers = [...numbers, 4, 5];
+
+                document.getElementById("es6demo").textContent = `${greet()} ${message} More numbers: ${moreNumbers.join(", ")}`;
+            }
+
+            // Functions and Events (Hover Box)
+            function changeColor() {
+                document.getElementById("hoverBox").style.backgroundColor = "orange";
+            }
+
+            function resetColor() {
+                document.getElementById("hoverBox").style.backgroundColor = "lightblue";
+            }
+
+            // DOM Manipulation (Update Paragraph)
+            function updateParagraph() {
+                let userInput = document.getElementById("inputText").value;
+                document.getElementById("dynamicText").textContent = userInput;
+            }
+
+            // Conditionals and Loops
+            function checkOddOrEven() {
+                let number = document.getElementById("numberInput").value;
+                if (number % 2 === 0) {
+                    document.getElementById("numberResult").textContent = `${number} is even.`;
+                } else {
+                    document.getElementById("numberResult").textContent = `${number} is odd.`;
+                }
+            }
+
+            function displayArray() {
+                let items = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+                document.getElementById("arrayList").innerHTML = "";
+                for (let i = 0; i < items.length; i++) {
+                    let listItem = document.createElement("li");
+                    listItem.textContent = items[i];
+                    document.getElementById("arrayList").appendChild(listItem);
+                }
+            }
+
+            // Async Programming (Promises, Async/Await)
+
+            // Simulate Delay with Promise
+            function simulateDelay() {
+                let promise = new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("Data fetched after 2 seconds!");
+                    }, 2000);
+                });
+
+                promise.then((message) => {
+                    document.getElementById("delayResult").textContent = message;
+                });
+            }
+
+            // Fetch Data using Async/Await
+            async function fetchData() {
+                try {
+                    let response = fetch("https://jsonplaceholder.typicode.com/posts/1");
+                    let data = response
+                    console.log(data)
+                    document.getElementById("fetchResult").textContent = `Title: ${data.title}`;
+                } catch (error) {
+                    document.getElementById("fetchResult").textContent = `Error fetching data: ${error}`;
+                }
+            }
+        </script>
+
+    </div>
+
+      <!-- LocalStorage and Cookies -->
+      <h2>LocalStorage and Cookies</h2>
+      <div class="box">
+          <p>Enter your name and click the button to store it in LocalStorage:</p>
+          <input type="text" id="localStorageInput" placeholder="Enter your name">
+          <button onclick="storeToLocalStorage()">Store to LocalStorage</button>
+          <button onclick="retrieveFromLocalStorage()">Get from LocalStorage</button>
+          <button onclick="deleteFromLocalStorage()">Delete from LocalStorage</button>
+          <p id="localStorageMessage"></p>
+      </div>
+
+      <div class="box">
+          <p>Set and get a cookie:</p>
+          <input type="text" id="cookieInput" placeholder="Enter something for cookie">
+          <button onclick="setCookie()">Set Cookie</button>
+          <button onclick="getCookie()">Get Cookie</button>
+          <button onclick="deleteCookie()">Delete Cookie</button>
+          <p id="cookieMessage"></p>
+      </div>
+
+      <!-- JavaScript Code for LocalStorage and Cookies -->
+      <script>
+          // LocalStorage Functions
+          function storeToLocalStorage() {
+              const name = document.getElementById("localStorageInput").value;
+              localStorage.setItem("name", name);
+              document.getElementById("localStorageMessage").textContent = "Stored in LocalStorage!";
+          }
+
+          function retrieveFromLocalStorage() {
+              const storedName = localStorage.getItem("name");
+              if (storedName) {
+                  document.getElementById("localStorageMessage").textContent = "Hello, " + storedName + "!";
+              } else {
+                  document.getElementById("localStorageMessage").textContent = "No name stored in LocalStorage.";
+              }
+          }
+
+          function deleteFromLocalStorage() {
+              localStorage.removeItem("name");
+              document.getElementById("localStorageMessage").textContent = "Name deleted from LocalStorage.";
+          }
+
+          // Cookie Functions
+          function setCookie() {
+              const cookieValue = document.getElementById("cookieInput").value;
+              document.cookie = "user=" + cookieValue + "; path=/;";
+              document.getElementById("cookieMessage").textContent = "Cookie Set!";
+          }
+
+          function getCookie() {
+              const name = "user=";
+              const decodedCookie = decodeURIComponent(document.cookie);
+              const ca = decodedCookie.split(';');
+              for (let i = 0; i < ca.length; i++) {
+                  let c = ca[i];
+                  while (c.charAt(0) == ' ') {
+                      c = c.substring(1);
+                  }
+                  if (c.indexOf(name) == 0) {
+                      document.getElementById("cookieMessage").textContent = "Cookie Value: " + c.substring(name.length, c.length);
+                      return;
+                  }
+              }
+              document.getElementById("cookieMessage").textContent = "Cookie not found!";
+          }
+
+          function deleteCookie() {
+              document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+              document.getElementById("cookieMessage").textContent = "Cookie Deleted!";
+          }
+      </script>
+
+
+
+</body>
+</html>
+<!-- <script src="script.js"></script> -->

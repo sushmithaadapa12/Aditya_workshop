@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics Workshop</title>
+    <style>
+        /* CSS Basics */
+        
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Class Selector */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ID Selector */
+        #main-title {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        /* Linking CSS with HTML */
+        /* Internal CSS (Defined in the <style> tag in the head) */
+
+        /* Basic Styling */
+
+        /* Color and Background */
+        .color-example {
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Font Size */
+        .font-size-example {
+            font-size: 20px;
+        }
+
+        /* Margin and Padding */
+        .box {
+            margin: 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border: 1px solid #00796b;
+        }
+
+        /* Border */
+        .border-example {
+            border: 2px dashed #ff9800;
+            padding: 10px;
+        }
+
+        /* CSS Box Model */
+        .box-model-example {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #ff5722;
+            margin: 10px;
+            background-color: #ffe0b2;
+        }
+
+        /* Text and Font Styling */
+        .text-example {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.8;
+        }
+
+        /* Layout with CSS */
+        
+        /* Display and Flexbox */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #b2dfdb;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background-color: #00796b;
+            color: #fff;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            width: 100px;
+        }
+
+        /* Simple Positioning */
+        .position-example {
+            position: relative;
+            background-color: #c8e6c9;
+            padding: 20px;
+            border: 1px solid #388e3c;
+        }
+
+        .position-example p {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- CSS Basics -->
+        <h1 id="main-title">Welcome to the CSS Basics Workshop</h1>
+        <p>In this workshop, we’ll cover the essential elements of CSS and learn how to style a webpage.</p>
+
+        <!-- Basic Styling -->
+        <h2>Basic Styling</h2>
+        <div class="color-example">
+            This div has <span style="color: #4CAF50;">color</span> and <span style="background-color: #FFEB3B;">background-color</span> applied.
+        </div>
+        <p class="font-size-example">This paragraph has a larger font size.</p>
+        <div class="box">This box has margin and padding applied to it.</div>
+        <div class="border-example">This element has a dashed border.</div>
+
+        <!-- CSS Box Model -->
+        <h2>CSS Box Model</h2>
+        <div class="box-model-example">
+            This box demonstrates the CSS box model with padding, border, and margin.
+        </div>
+
+        <!-- Text and Font Styling -->
+        <h2>Text and Font Styling</h2>
+        <p class="text-example">This text is styled with font-family, font-size, text-align, font-weight, and line-height.</p>
+
+        <!-- Layout with CSS -->
+        <h2>Layout with CSS</h2>
+        
+        <!-- Display and Flexbox -->
+        <h3>Flexbox Layout</h3>
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <!-- Positioning -->
+        <h3>Positioning</h3>
+        <div class="position-example">
+            This div has a relative position.
+            <p>This paragraph is absolutely positioned within the relative container.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
