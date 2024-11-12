@@ -47,7 +47,7 @@
 
         <!-- Table -->
         <p>Example Table:</p>
-        <table border="1">
+        <table>
             <tr>
                 <th>Course</th>
                 <th>Duration</th>
@@ -100,49 +100,80 @@
     <section id="forms">
         <h2>Forms in HTML</h2>
 
-        <!-- Form with Basic Input Types -->
+        <!-- Basic Form with Input Fields -->
         <form action="#" method="post">
-            <!-- Label and Text Input -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
-            <br><br>
-
-            <!-- Email Input -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-            <br><br>
-
-            <!-- Password Input -->
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required><br><br>
 
-            <br><br>
-
-            <!-- Number Input -->
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="1" max="100">
+            <input type="number" id="age" name="age" min="1" max="100"><br><br>
 
-            <br><br>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
 
-            <!-- Textarea -->
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
-
-            <br><br>
-
-            <!-- Select Dropdown -->
             <label for="country">Country:</label>
             <select id="country" name="country">
                 <option value="us">United States</option>
                 <option value="ca">Canada</option>
                 <option value="uk">United Kingdom</option>
-            </select>
+            </select><br><br>
 
-            <br><br>
+            <button type="submit">Submit</button>
+        </form>
 
-            <!-- Submit Button -->
+        <!-- Additional Form Examples -->
+
+        <!-- Checkbox Input -->
+        <h3>Checkboxes</h3>
+        <form>
+            <label for="subscribe">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Radio Buttons -->
+        <h3>Radio Buttons</h3>
+        <form>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- File Input -->
+        <h3>File Upload</h3>
+        <form>
+            <label for="file">Upload a file:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <button type="submit">Upload</button>
+        </form>
+
+        <!-- Date Input -->
+        <h3>Date Picker</h3>
+        <form>
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Time Input -->
+        <h3>Time Picker</h3>
+        <form>
+            <label for="event-time">Event Time:</label>
+            <input type="time" id="event-time" name="event-time"><br><br>
+
             <button type="submit">Submit</button>
         </form>
     </section>

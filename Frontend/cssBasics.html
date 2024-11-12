@@ -28,9 +28,6 @@
             text-align: center;
         }
 
-        /* Linking CSS with HTML */
-        /* Internal CSS (Defined in the <style> tag in the head) */
-
         /* Basic Styling */
 
         /* Color and Background */
@@ -114,6 +111,59 @@
             padding: 5px;
             border: 1px solid #388e3c;
         }
+
+        /* Hover Effects */
+        .hover-example {
+            padding: 20px;
+            background-color: #4caf50;
+            color: white;
+            width: 200px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .hover-example:hover {
+            background-color: #45a049;
+        }
+
+        /* CSS Transitions */
+        .transition-example {
+            width: 100px;
+            height: 100px;
+            background-color: #f44336;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .transition-example:hover {
+            width: 150px;
+            height: 150px;
+            background-color: #4caf50;
+        }
+
+        /* CSS Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #ffeb3b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -160,6 +210,27 @@
             <p>This paragraph is absolutely positioned within the relative container.</p>
         </div>
 
+        <!-- Hover Effects -->
+        <h3>Hover Effects</h3>
+        <div class="hover-example">
+            Hover over me to change color!
+        </div>
+
+        <!-- CSS Transitions -->
+        <h3>CSS Transitions</h3>
+        <div class="transition-example"></div>
+
+        <!-- CSS Grid Layout -->
+        <h3>CSS Grid Layout</h3>
+        <div class="grid-container">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+        </div>
+
+        <!-- Responsive Design -->
+        <h3>Responsive Design</h3>
+        <p>Resize the screen to see how the layout adjusts. The flex container changes to a column layout and the grid layout becomes a single column.</p>
     </div>
 
 </body>
