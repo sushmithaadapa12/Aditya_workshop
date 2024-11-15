@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+            background-size: cover;
+            background-position: center;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 250px;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+
+        .sidebar a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .sidebar a i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Main Content Area */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.7);
+            overflow-y: auto;
+        }
+
+        .profile {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .profile h2 {
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .profile .info {
+            margin-bottom: 10px;
+        }
+
+        .profile .info span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student Dashboard</h1>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+        <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Courses</a>
+        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+        <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="profile">
+            <h2>Student Profile</h2>
+            <div class="info">
+                <span>Name:</span> John Doe
+            </div>
+            
+            <div class="info">
+                <span>Age:</span> 21
+            </div>
+            <div class="info">
+                <span>Email:</span> johndoe@example.com
+            </div>
+            <div class="info">
+                <span>Enrolled Courses:</span> 5
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 Student Dashboard. All Rights Reserved.
+    </div>
+</body>
+</html>
+

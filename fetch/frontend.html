@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .container h2 {
+            margin-bottom: 25px;
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #1e88e5;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Registration Page</h1>
+    </nav>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Registration Page. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password }),
+                });
+
+                if (response.ok) {
+                    alert('Registration successful!');
+                    window.location.href = 'dashboard.html';
+                } else {
+                    const data = await response.json();
+                    alert(data.message || 'Registration failed!');
+                }
+            } catch (error) {
+                alert('Error connecting to the server.');
+            }
+        });
+    </script>
+</body>
+</html>
+
