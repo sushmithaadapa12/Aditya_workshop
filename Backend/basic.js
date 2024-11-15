@@ -19,9 +19,8 @@ fs.writeFile('example.txt', 'Hello, Node.js!', (err) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(9000, () => {
   console.log('Server running on port 3000');
 });
-
 
 
